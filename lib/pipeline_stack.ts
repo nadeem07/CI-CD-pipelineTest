@@ -30,7 +30,10 @@ export class CdkpipelineStack extends cdk.Stack{
 pipeline.addStage(new PipelineTestStage(this, 'test', {
     env: { account: process.env.acc_no, region: process.env.region }
   }));
-
+  
+  pipeline.addStage(new PipelineTestStage(this, 'test', {
+    env: { account: process.env.acc_no, region: process.env.region }
+  }));
     }
 
 }
